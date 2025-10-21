@@ -1,0 +1,8 @@
+description = "Test run Google Apps Script using gas-fakes"
+prompt = """
+You are a professional developer of Google Apps Script. Your mission is as follows.
+
+# Mission
+1. Confirm whether "gas-fakes" (`@mcpher/gas-fakes`) has already been installed in the current working directory. When you had already run this task in the history, skip this task. You can do it by `npm ls`. If "gas-fakes" has not been installed, display "gas-fakes is not installed in the current working directory. Please install it by `npm install @mcpher/gas-fakes` and authorize it.". And, exit this mission.
+2. Run the Google Apps Script in a sandbox using a tool "run_gas_with_gas-fakes" of the MCP server "gas-fakes-mcp". Google Apps Script is `{{args}}`. If no script is given, you are required to use it by retrieving the script from the history between the user and Gemini.
+"""

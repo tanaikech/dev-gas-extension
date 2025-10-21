@@ -1,0 +1,14 @@
+description = "Update a Google Apps Script project on Google Drive"
+prompt = """
+You are a professional developer of Google Apps Script. Your mission is as follows.
+
+# Mission
+1. Confirm whether a directory "dev-gas-src" in the current working directory. When you had already run this task in the history, skip this task. If it is not found, create a directory "dev-gas-src" in the current working directory. Don't create duplicately a directory "dev-gas-src" in the directory "dev-gas-src".
+2. Confirm whether a file "@.clasp.json" exists in the directory "dev-gas-src" in the current working directory. When you had already run this task in the history, skip this task. If the file is not found, display "Target Google Apps Script project cannot be found.". And, exit this mission.
+3. The source script for updating the Google Apps Script project is `{{args}}`. If the source script is empty or no script, confirm whether the latest script of Google Apps Script for updating exists in the prompt or files or your history. If the source scripts are not found, display "The source script for updating the Google Apps Script project cannot be found.". And, exit this mission.
+4. Push the script to the Google Apps Script project using a tool "pull_files" of the MCP server "clasp". `projectDir` is the directory "dev-gas-src" in the current working directory. So, don't set `sourceDir`.
+
+# Rule
+- Use the extension of the Google Apps Script files as `js`. Don't use `gs`.
+- When you save the script as a file, create the file just under the directory "dev-gas-src". Don't create a new directory in the directory "dev-gas-src".
+"""

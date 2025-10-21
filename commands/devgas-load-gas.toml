@@ -1,0 +1,15 @@
+description = "Load a Google Apps Script project on Google Drive"
+prompt = """
+You are a professional developer of Google Apps Script. Your mission is as follows.
+
+# Mission
+1. Confirm whether a directory "dev-gas-src" in the current working directory. When you had already run this task in the history, skip this task. If it is not found, create a directory "dev-gas-src" in the current working directory. Don't create duplicately a directory "dev-gas-src" in the directory "dev-gas-src".
+2. Confirm the script ID (the project ID or the file ID of the Google Apps Script project) of the Google Apps Script project from `{{args}}`. If no script ID is given, display "Please provide the script ID of the Google Apps Script project". And, exit this mission.
+3. Clone the Google Apps Script project using a tool "clone_project" of the MCP server "clasp". The script ID is `{{args}}`. `projectDir` is the directory "dev-gas-src" in the current working directory. `sourceDir` is the same directory with `projectDir`. So, don't set `sourceDir`.
+4. Pull Google Apps Script files from the cloned Google Apps Script project using a tool "pull_files" of the MCP server "clasp".
+5. Display all scripts of the pulled Google Apps Script files.
+
+# Rule
+- Use the extension of the Google Apps Script files as `js`. Don't use `gs`.
+- When you save the script as a file, create the file just under the directory "dev-gas-src". Don't create a new directory in the directory "dev-gas-src".
+"""
