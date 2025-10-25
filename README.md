@@ -114,7 +114,7 @@ The `workspace-developer` tool is from the [Use Large Language Models (LLMs) to 
 
 The sample prompts using the tools of this MCP server are as follows.
 
-- []()
+- [Streamlining Google Apps Script Development with Gemini CLI Extensions and VSCode](https://medium.com/google-cloud/streamlining-google-apps-script-development-with-gemini-cli-extensions-and-vscode-d69e9eaea22a)
 
 ---
 
